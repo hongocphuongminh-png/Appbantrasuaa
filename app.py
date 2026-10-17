@@ -81,6 +81,7 @@ st.title("QUÁN TRÀ SỮA MR BÌNH")
 st.markdown("---")
 
 col_left, col_right = st.columns([1.1, 0.9])
+
 # ==================== CỘT TRÁI: NHẬP THÔNG TIN ====================
 with col_left:
     st.subheader("📝 Thông tin đơn hàng")
@@ -157,7 +158,7 @@ with col_right:
 
         # Nút xóa giỏ hàng
         if st.button("🗑️ Xóa tất cả món"):
-st.session_state.cart = []
+            st.session_state.cart = []
             st.session_state.invoice_paid = False
             st.rerun()
 
